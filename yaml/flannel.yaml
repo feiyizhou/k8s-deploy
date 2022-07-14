@@ -1,0 +1,11 @@
+flannel:
+  network:
+    172.16.0.0/16
+  type:
+    vxlan
+  kubeApiServer:
+    172.16.200.235
+  hostNameOverride:
+    master01
+  ifaceName:
+    enp1s0

@@ -1,0 +1,5 @@
+etcd:
+  currentName: etcd-1
+  nodes:
+    - name: etcd-1
+      ip: 172.16.200.235
