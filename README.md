@@ -1,10 +1,12 @@
 # Deploy kubernetes cluster with shell
 
-# 构建
+## 构建
 
 ```shell
 git clone git@github.com:feiyizhou/k8s-deploy.git
+
 cd k8s-deploy
+
 go build -o sobeyadm
 ```
 
