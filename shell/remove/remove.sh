@@ -18,8 +18,12 @@ rm -rf ~/TLS/
 
 rm -rf /opt/kubernetes/
 
+rm -rf /opt/k8s-deploy/
+
 rm -rf /opt/etcd/
 
 rm -rf /var/lib/cni/
+
+rm -rf /var/lib/kubelet/
 
 rm -rf /root/.kube
