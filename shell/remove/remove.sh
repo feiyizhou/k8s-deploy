@@ -6,18 +6,20 @@ ifconfig flannel.1 down
 ip link del cni0
 ip link del flannel.1
 
+yum remove cfssl.aarch64 -y
+yum remove cni-plugins.aarch64 -y
+yum remove etcd.aarch64 -y
+yum remove flanneld.aarch64 -y
+yum remove kubernetes.aarch64 -y
+yum remove sobeyadm.aarch64 -y
+
 
 rm -rf ~/TLS/
 
-rm -rf /opt/kubernetes/ssl
-rm -rf /opt/kubernetes/cfg
-rm -rf /opt/kubernetes/logs
+rm -rf /opt/kubernetes/
 
-rm -rf /opt/etcd/ssl
-rm -rf /opt/etcd/cfg
+rm -rf /opt/etcd/
 
-rm -rf /var/lib/cni/cache
-rm -rf /var/lib/cni/flannel
-rm -rf /var/lib/cni/networks
+rm -rf /var/lib/cni/
 
 rm -rf /root/.kube

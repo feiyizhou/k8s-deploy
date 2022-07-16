@@ -19,7 +19,7 @@ const (
 )
 
 const (
-	ShellHomePath = "/root/wangjian/k8s-deploy/shell"
+	ShellHomePath = "/opt/k8s-deploy/shell"
 
 	OsInitShell = "/os/os_init.sh"
 
@@ -30,7 +30,7 @@ const (
 	SingleDeployShellPath = ShellHomePath + "/%s/single_deploy.sh"
 	ClearShellPath        = ShellHomePath + "/%s/clear.sh"
 
-	YamlConfigHomePath = "/root/wangjian/k8s-deploy/yaml"
+	YamlConfigHomePath = "/opt/k8s-deploy/yaml"
 	YamlConfigType     = "yaml"
 )
 
