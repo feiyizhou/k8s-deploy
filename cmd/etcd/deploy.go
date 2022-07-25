@@ -57,7 +57,7 @@ func (es *etcdService) startService(conf *config.EtcdConf) error {
 				currentIP = node.IP
 			}
 			clusterIPArr = append(clusterIPArr,
-				fmt.Sprintf("%s=%s", node.Name, node.IP))
+				fmt.Sprintf("%s=https://%s:2380", node.Name, node.IP))
 		}
 		deployArgs = []string{
 			common.GetDeployShellPath(common.ETCD),
