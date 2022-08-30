@@ -7,7 +7,7 @@ git clone git@github.com:feiyizhou/k8s-deploy.git
 
 cd k8s-deploy
 
-go build -o sobeyadm
+go build -o k8sdeploy
 ```
 
 ## 配置
@@ -91,47 +91,47 @@ flannel:
 
 ```shell
 # 1、系统初始化
-sobeyadm os-init
+k8sdeploy os-init
 ```
 
 ### 2、ETCD
 
 ```shell
 # 1、部署ETCD
-sobeyadm deploy etcd
+k8sdeploy deploy etcd
 ```
 
 ### 3、Kubernetes
 
 ```shell
 # 1、部署kube-apiserver
-sobeyadm deploy kube-apiserver
+k8sdeploy deploy kube-apiserver
 
 # 2、部署kube-controller-manager
-sobeyadm deploy kube-controller-manager
+k8sdeploy deploy kube-controller-manager
 
 # 3、部署kube-scheduler
-sobeyadm deploy kube-scheduler
+k8sdeploy deploy kube-scheduler
 
 # 4、创建root service account
-sobeyadm deploy root-sa
+k8sdeploy deploy root-sa
 
 # 5、部署kubelet并加入集群
-sobeyadm deploy kubelet
-sobeyadm deploy join-cluster
+k8sdeploy deploy kubelet
+k8sdeploy deploy join-cluster
 
 # 6、部署kube-proxy
-sobeyadm deploy kube-proxy
+k8sdeploy deploy kube-proxy
 ```
 
 ### 4、Flannel
 
 ```shell
 # 1、部署cni
-sobeyadm deploy cni
+k8sdeploy deploy cni
 
 # 2、部署flannel
-sobeyadm deploy flannel
+k8sdeploy deploy flannel
 ```
 
 ## 卸载
@@ -140,32 +140,32 @@ sobeyadm deploy flannel
 
 ```shell
 # 1、卸载ETCD
-sobeyadm clear etcd
+k8sdeploy clear etcd
 ```
 
 ### 2、Kubernetes
 
 ```shell
 # 1、卸载kube-proxy
-sobeyadm clear kube-proxy
+k8sdeploy clear kube-proxy
 
 # 2、卸载kubelet
-sobeyadm clear kubelet
+k8sdeploy clear kubelet
 
 # 3、卸载kube-scheduler
-sobeyadm clear kube-scheduler
+k8sdeploy clear kube-scheduler
 
 # 4、卸载kube-controller-manager
-sobeyadm clear kube-controller-manager
+k8sdeploy clear kube-controller-manager
 
 # 5、卸载kube-apiserver
-sobeyadm clear kube-apiserver
+k8sdeploy clear kube-apiserver
 ```
 
 ### 3、配置
 
 ```shell
 # 1、移除创建的公共配置文件夹及文件
-sobeyadm remove
+k8sdeploy remove
 ```
 
